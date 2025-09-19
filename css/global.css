@@ -1,0 +1,28 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    /* gradient: dark blue (left) → lighter blue (right) */
+    background: linear-gradient(
+      to right, 
+      rgba(0, 51, 153, 0.9),   /* darker medium blue, semi-transparent */
+      rgba(51, 153, 255, 0.7)  /* lighter blue, semi-transparent */
+    );
+  
+    position: fixed;   /* sticks to the top */
+    top: 0;            /* aligns with top of viewport */
+    left: 0;           /* flush with left edge */
+    width: 100%;       /* full width across screen */
+    margin: 0;         /* no margins */
+    padding: 15px 20px; /* some breathing room inside */
+  
+    display: flex;     /* makes links sit in a row */
+    align-items: center;
+    justify-content: space-between; /* spread out logo vs. nav links */
+    
+    z-index: 1000;     /* keep it above other elements */
+  }
+  
