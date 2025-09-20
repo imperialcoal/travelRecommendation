@@ -10,17 +10,27 @@
 <body>
     <header>
         <nav class="navbar">
+            <div class="nav-logo">
+                <a href="travel_recommendation.html"><img src="images/airplane.png" alt="Travel Global Logo"></a>
+            </div>
             <div class="nav-left">
-                <a href="travel_recommendation.html" class="company-name">Travel Global</a>    
+                <a href="travel_recommendation.html">Travel Global</a>    
+            </div>            
+            <div class="nav-center">
                 <a href="travel_recommendation.html">Home</a>
                 <a href="about_us.html">About Us</a>
                 <a href="contact_us.html">Contact Us</a>
             </div>
-
             <div class="nav-right">
-                <form action="/search" method="get" class="search-form"><input type="text" name="q" placeholder="Search destinations..." aria-label="Search">
-                    <button type="submit">Search</button>
-                    <button type="reset">Reset</button>
+                <form action="/search" method="get" class="search-form">
+                    <div class="nav-search-container">
+                        <input type="text" name="q" placeholder="Enter a destination or keyword" aria-label="Search">
+                        <span class="nav-search-icon"><img src="images/search_bar_icon.png" alt="Search Bar Icon"></span>
+                    </div>
+                    <div class="nav-btn-container">
+                        <button id="search" type="submit">Search</button>
+                        <button id="clear" type="clear">Clear</button>
+                    </div>
                 </form>
             </div>
         </nav>
