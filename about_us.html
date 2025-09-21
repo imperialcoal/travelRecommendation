@@ -5,21 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/about_us.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
+            <div class="nav-logo">
+                <a href="travel_recommendation.html"><img src="images/airplane.png" alt="Travel Global Logo"></a>
+            </div>
             <div class="nav-left">
-                <a href="travel_recommendation.html" class="logo">Travel Global</a>
-                <ul class="nav-links">
-                    <li><a href="travel_recommendation.html">Home</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="contact_us.html">Contact Us</a></li>
-                </ul>
+                <a href="travel_recommendation.html">Travel Global</a>    
+            </div>            
+            <div class="nav-center">
+                <a href="travel_recommendation.html">Home</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="nav-right">
+                <form action="/search" method="get" class="search-form">
+                    <div class="nav-search-container">
+                        <input type="text" name="q" placeholder="Enter a destination or keyword" aria-label="Search">
+                        <span class="nav-search-icon"><img src="images/search_bar_icon.png" alt="Search Bar Icon"></span>
+                    </div>
+                    <div class="nav-btn-container">
+                        <button id="search" type="submit">Search</button>
+                        <button id="clear" type="clear">Clear</button>
+                    </div>
+                </form>
             </div>
         </nav>
-    </header>    
+    </header>   
     <section class="about-hero">
         <div class="container">
             <h1>About Us</h1>
