@@ -13,3 +13,23 @@ body {
     font-family: Arial, sans-serif;
     background-position: center;  /* center image */
 }
+
+:root {
+  /* default navbar height (desktop). We'll override per breakpoint below */
+  --nav-h: 82px;
+}
+
+/* Utility: apply top-offset to any full-viewport section so navbar doesn't cover it */
+.hero {
+  /* ensure hero sits below the navbar and does not get hidden */
+  box-sizing: border-box;
+  padding-top: calc(var(--nav-h) + 12px);        /* space for nav + a little breathing room */
+  min-height: calc(100vh - var(--nav-h));       /* viewport minus navbar area */
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* If you also use other full-viewport sections, reuse the same technique */

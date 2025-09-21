@@ -1,31 +1,43 @@
 /* Hero Section */
 .hero {
-    height: 100vh;
+    background: url("../images/background.jpg") center center/cover no-repeat;
+    color: #fff;
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 0 5%;
-    position: relative;
+    box-sizing: border-box;
+    /* padding and min-height handled by global.css via --nav-h */
 }
 
-/* Social Icons */
+/* social icons: ensure visible and clickable */
 .social-icons {
     position: absolute;
-    left: 20px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    z-index: 900; /* above hero and navbar if you want them on top — change to 900 if you want them below navbar */
 }
 
 .social-icons a {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #fff;
+    background: rgba(0,0,0,0.25);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform .15s ease, background .15s ease;
 }
 
 .social-icons a:hover {
-    color: #00aced;
+    transform: translateX(4px);
+    background: rgba(0,0,0,0.45);
 }
 
 /* Hero Content */
@@ -49,7 +61,7 @@
     display: inline-block;
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
-    background: #0073e6;
+    background: #0000FF;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -66,6 +78,8 @@
     .hero-content h1 {
         font-size: 2rem;
     }
+    .social-icons { left: 12px; gap: 0.9rem; }
+    .social-icons a { width: 40px; height: 40px; font-size: 1.05rem; }    
 }
 
 @media (max-width: 480px) {
@@ -75,4 +89,6 @@
     .hero-content p {
         font-size: 0.9rem;
     }
+    .social-icons { left: 8px; gap: 0.7rem; }
+    .social-icons a { width: 36px; height: 36px; font-size: 0.95rem; }    
 }
