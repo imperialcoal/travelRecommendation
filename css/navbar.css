@@ -1,6 +1,6 @@
 /* --- base navbar (desktop default) --- */
 .navbar {
-    --nav-h: 82px; /* desktop nav height */
+    --nav-h: 126px; /* desktop nav height */
     background: linear-gradient(to right, rgba(0,51,153,0.9), rgba(51,153,255,0.7));
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@
 /* Branding text */
 .nav-left a {
     text-decoration: none;
-    font-size: 1.8em;
+    font-size: 2em;
     color: #fff;
     white-space: nowrap;
 }
