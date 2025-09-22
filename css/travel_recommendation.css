@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-    background: url("../images/background.jpg") center center/cover no-repeat;
+    background-image: url("../images/background.jpg");
     color: #fff;
     position: relative;
     display: flex;
@@ -13,7 +13,34 @@
     box-sizing: border-box;  
 }
 
-/* social icons: ensure visible and clickable */
+/* Hero Content */
+.hero-content {
+    max-width: 750px;
+    flex: 1;                /* take remaining space */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    background: #0000FF;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Social Icons */
 .social-icons {
     position: static;               /* let flexbox handle it */
     display: flex;
@@ -39,34 +66,6 @@
 .social-icons a:hover {
     transform: translateX(4px);
     background: rgba(0,0,0,0.45);
-}
-
-/* Hero Content */
-.hero-content {
-    max-width: 750px;
-    color: white;
-    flex: 1;                /* take remaining space */
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-.hero-content p {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-}
-
-.hero-content .btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    background: #0000FF;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 /* Responsive */

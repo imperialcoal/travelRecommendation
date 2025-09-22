@@ -1,1 +1,168 @@
+/* Hero Section */
+/* .about-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 10% 4rem;
+  position: relative;
+  text-align: center;
+} */
 
+.about-us {
+    background-image: url("../images/background.jpg");
+}
+
+.about-hero {
+    color: #fff;
+    position: relative;
+    display: flex;
+    /* align-items: center;     vertically center */
+    justify-content: flex-start; /* keep everything to the left */
+    gap: 3rem;               /* space between icons and text */
+    width: 100%;
+    min-height: 100vh;       /* fill screen height */
+    padding: 0 1.5%;           /* breathing room left/right */
+    box-sizing: border-box;  
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.55); /* subtle overlay for readability */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1000px;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-hero .intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Social Icons */
+.social-icons {
+    align-self: center;   /* center only this flex item vertically */
+    position: static;               /* let flexbox handle it */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;                 /* don’t let them squish */    
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #fff;
+    background: rgba(0,0,0,0.25);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform .15s ease, background .15s ease;
+}
+
+.social-icons a:hover {
+    transform: translateX(4px);
+    background: rgba(0,0,0,0.45);
+}
+
+/* Prevent collision with content */
+/* .about-hero,
+.team { */
+    /* padding-left: 80px; ensures hero text + team members clear the icons */
+/* } */
+
+/* Team Section */
+.team {
+    padding: 4rem 10%;
+    /* background: rgba(255, 255, 255, 0.9); */
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+  /* background: rgba(255, 255, 255, 0.85); */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+    display: inline-block;
+    background: #0000FF;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.team-member p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .about-hero-content .intro {
+        font-size: 1rem;
+    }
+}
+
+/* Adjust for small screens */
+@media (max-width: 600px) {
+    .social-icons {
+        left: 10px;
+        gap: 1rem;
+    }
+
+    .about-hero-content,
+    .team {
+        padding-left: 60px; /* slightly less padding on smaller devices */
+    }
+}
