@@ -23,6 +23,19 @@
                 <a href="about_us.html">About Us</a>
                 <a href="contact_us.html">Contact Us</a>
             </div>
+            <div class="nav-right">
+                <form action="/search" method="get" class="search-form">
+                    <div class="nav-search-container">
+                        <input type="text" name="q" placeholder="Enter a destination or keyword" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="nav-btn-container">
+                        <button id="search" type="submit">Search</button>
+                        <button id="clear" type="clear">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </nav>            
         </nav>
     </header>
     <div class="about-us">
@@ -38,40 +51,53 @@
             <div class="about-hero-content">
                 <h1>ABOUT US</h1>
                 <div class="hero-overlay">
-                    <p class="intro">
-                        Welcome to <strong>TravelBloom!</strong> We are a team of passionate individuals dedicated to providing excellent services and products to our customers. Our mission is to <strong>provide the best experience</strong> for people traveling to different destinations around the world.  
-                        <br><br>
-                        Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in <strong>putting our customers first</strong> and <strong>working together</strong> to achieve our goals.
+                    <p class="about-text">
+                        At <strong>Travel Global</strong>, we believe travel is more than just visiting a place - 
+                        it's about creating experiences that stay with you for a lifetime. Founded with the vision 
+                        of helping travelers find destinations that truly inspire them, we combine expert insights, 
+                        curated guides, and smart tools to make travel planning simple, fun, and stress-free.
                     </p>
                 </div>
             </div>
         </section>
+        <section class="mission-hero">
+            <div class="mission-hero-content">
+                <h2>Our Mission</h2>
+                <div class="hero-overlay">
+                    <p class="mission-text">
+                        Our mission is to empower every traveler - from the spontaneous adventurer to the meticulous planner - 
+                        to find the perfect journey. Whether you're dreaming of white-sand beaches, bustling city streets, 
+                        or hidden mountain retreats, Travel Global is here to guide you every step of the way.
+                    </p>
+                </div>
+            </div>
+        </section>        
         <!-- Team Section -->
-        <!-- <section class="team">
-            <div class="container">
+        <section class="team">
+            <div class="team-container">
                 <h2>Our Team</h2>
                 <div class="team-grid">
-                    <div class="team-member">
-                        <img src="images/sarah.jpg" alt="Sarah Mitchell">
+                    <div class="team-member hero-overlay">
+                        <img src="images/female_profile.png" alt="Female Profile">
                         <h3>Sarah Mitchell</h3>
+                        <p>Sarah is responsible for leading Travel Global and setting the vision for our company.</p>
                         <p class="role">CEO</p>
-                        <p>Sarah is responsible for leading TravelBloom and setting the vision for our company.</p>
                     </div>
-                    <div class="team-member">
-                        <img src="images/james.jpg" alt="James Rivera">
+                    <div class="team-member hero-overlay">
+                        <img src="images/male_profile.png" alt="Male Profile">
                         <h3>James Rivera</h3>
-                        <p class="role">Team Lead</p>
                         <p>James ensures our travel experiences are curated and meaningful for all travelers.</p>
+                        <p class="role">Team Lead</p>
                     </div>
-                    <div class="team-member">
-                        <img src="images/lena.jpg" alt="Lena Chen">
+                    <div class="team-member hero-overlay">
+                        <img src="images/female_profile.png" alt="Female Profile">
                         <h3>Lena Chen</h3>
-                        <p class="role">Delivery Head</p>
                         <p>Lena oversees our product delivery to ensure smooth and reliable service.</p>
+                        <p class="role">Delivery Head</p>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </div>
     <script src="js/layout_adjustments.js"></script>
 </body>

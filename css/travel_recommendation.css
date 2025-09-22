@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-    background-image: url("../images/background.jpg");
+    /* background-image: url("../images/background.jpg"); */
     color: #fff;
     position: relative;
     display: flex;
@@ -25,9 +25,9 @@
     line-height: 1.2;
 }
 
-.hero-content p {
+.hero-text {
     margin: 1rem 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .hero-content .btn {
@@ -68,28 +68,15 @@
     background: rgba(0,0,0,0.45);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+/* Adjust for small screens */
+@media (max-width: 600px) {
+    .social-icons {
+        left: 10px;
+        gap: 1rem;
     }
-}
 
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .social-icons { left: 12px; gap: 0.9rem; }
-    .social-icons a { width: 40px; height: 40px; font-size: 1.05rem; }    
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.6rem;
-    }
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-    .social-icons { left: 8px; gap: 0.7rem; }
-    .social-icons a { width: 36px; height: 36px; font-size: 0.95rem; }    
+    /* .about-hero-content,
+    .team {
+        padding-left: 60px; slightly less padding on smaller devices
+    } */
 }

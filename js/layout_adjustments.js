@@ -18,7 +18,7 @@ window.addEventListener('resize', adjustHeroPadding);
     if (navbar && aboutHero) {
         const navHeight = navbar.offsetHeight;
         aboutHero.style.paddingTop = navHeight + 'px';
-        aboutHero.style.minHeight = `calc(100vh - ${navHeight}px)`;
+        // aboutHero.style.minHeight = `calc(100vh - ${navHeight}px)`;
     }
 }
 
