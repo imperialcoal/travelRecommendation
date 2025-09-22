@@ -48,10 +48,12 @@
 
 /* Adjust for small screens */
 @media (max-width: 600px) {
-    .social-icons {
+    /* .social-icons {
         left: 10px;
         gap: 1rem;
-    }
+    } */
+
+    
 
     /* .about-hero-content,
     .team {
