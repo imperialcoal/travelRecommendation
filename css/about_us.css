@@ -3,6 +3,12 @@
 }
 
 /* About Us Hero Section */
+.about-us {
+    min-height: 100vh;       /* fill screen height */
+    padding: 0 1.5%;           /* breathing room left/right */
+    box-sizing: border-box;      
+}
+
 .about-hero {
     color: #fff;
     position: relative;
@@ -74,13 +80,13 @@
     display: flex;
     /*justify-content: flex-start;*/ /* keep everything to the left */
     width: 100%;
-    padding: 2rem 25%;   /* consistent spacing */
-    margin-top: 1.5rem;     /* space between about + mission */
+    padding: 2rem 30%;   /* consistent spacing */
+    /*margin-top: .5rem;*/     /* space between about + mission */
     box-sizing: border-box;  
 }
 
 .mission-hero-content {
-    margin: auto;
+    margin: 0 auto;
 }
 
 .mission-hero h2 {
