@@ -79,10 +79,16 @@
 .nav-search-container input {
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 0.8rem;
-    border: 2px solid #0000FF;
+    /* border: 2px solid #0000FF; */
+    border: 3px solid rgba(35, 80, 255, 0.9);
     border-radius: 30px;
     font-size: 1em;
     box-sizing: border-box;
+}
+
+.nav-search-container input:focus {
+    outline: none;
+    border-color: #00bcd4;
 }
 
 .nav-search-container .fa-magnifying-glass {
@@ -93,7 +99,7 @@
     pointer-events: none;
     width: 20px;
     height: 20px;
-    color: #0000FF;
+    color: rgba(35, 80, 255, 0.9);
 }
 
 /* Buttons */
@@ -102,14 +108,22 @@
     gap:0.5rem; 
 }
 
-.nav-right button {
+.btn-search,
+.btn-clear {
     padding: 0.5rem 0.8rem;
     border-radius: 8px;
-    background-color: #0000FF;
+    background-color: rgba(0, 0, 255, 0.5);
     color: #fff;
     border: none;
     cursor: pointer;
     white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-search:hover,
+.btn-clear:hover {
+    background: #008080;
 }
 
 /* ----------------------------------

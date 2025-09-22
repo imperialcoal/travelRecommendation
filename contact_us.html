@@ -32,8 +32,8 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="nav-btn-container">
-                        <button id="search" type="submit">Search</button>
-                        <button id="clear" type="clear">Clear</button>
+                        <button id="btn-search" type="submit">Search</button>
+                        <button id="btn-clear" type="clear">Clear</button>
                     </div>
                 </form>
             </div>            
@@ -42,34 +42,30 @@
     <section class="contact-hero">
         <!-- Social Icons -->
         <div class="social-icons">
-            <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="social-media-overlay" href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a class="social-media-overlay" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-media-overlay" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="social-media-overlay" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
         <!-- Hero Content -->
         <div class="contact-hero-content">
-            <h1>CONTACT US</h1>
-            <p class="tagline">Get in touch</p>
+            <h1>CONTACT US</h1>        
         </div>
         <!-- Contact Form -->
         <div class="contact-form-container">
-            <form action="/submit-contact" method="post" class="contact-form">
+            <form action="/submit-contact" method="post" class="contact-form hero-overlay">
                 <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
                 </div>
-
                 <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
                 </div>
-
                 <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-
                 <button type="submit" class="btn-submit">Submit</button>
             </form>
         </div>

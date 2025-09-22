@@ -22,3 +22,39 @@ body {
     font-family: Arial, sans-serif;
     position: relative; /* ensures stacking works */
 }
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.55); /* subtle overlay for readability */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1000px;
+}
+
+/* Social Icons */
+.social-icons {
+    align-self: center;         /* center only this flex item vertically */
+    position: static;           /* let flexbox handle it */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;             /* don’t let them squish */    
+}
+
+.social-media-overlay {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #fff;
+    background: rgba(0,0,0,0.55);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform .15s ease, background .15s ease;
+}
+
+.social-icons a:hover {
+    transform: translateX(4px);
+    background: rgba(0,0,0,0.45);
+}
