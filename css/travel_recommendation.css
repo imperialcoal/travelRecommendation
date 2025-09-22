@@ -39,7 +39,8 @@
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s ease;    
+    transition: background 0.2s ease;  
+    margin-bottom: 2rem;  
 }
 
 .btn-book:hover {
@@ -48,15 +49,26 @@
 
 /* Adjust for small screens */
 @media (max-width: 600px) {
-    /* .social-icons {
-        left: 10px;
-        gap: 1rem;
-    } */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
 
+    .hero-content {
+        padding-top: 0;
+        margin: 0 auto;
+     }
+
+     .hero-content h1 {
+        width: 100%;
+        padding: 0 1rem 0 1.5%;
+    }
     
-
-    /* .about-hero-content,
-    .team {
-        padding-left: 60px; slightly less padding on smaller devices
-    } */
+    .social-icons {
+        transform: none;
+        flex-direction: row;
+        margin: 1rem auto;
+        padding: 7% 0 0 13%;
+    }    
 }

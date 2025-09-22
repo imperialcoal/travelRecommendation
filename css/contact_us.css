@@ -4,14 +4,15 @@
 
 /* Contact Hero Section */
 .contact-hero {
+    color: #fff;
     position: relative;
     display: flex;
     justify-content: flex-start;
-    gap: 3rem;
     align-items: flex-start;
+    gap: 3rem;
     min-height: 100vh;
     padding: 0 1.5%;
-    color: #fff;
+    box-sizing: border-box;  
 }
 
 /* Left Hero Content */
@@ -21,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 .contact-hero-content h1 {
@@ -34,7 +35,7 @@
 .contact-form-container {
     flex: 1;
     max-width: 800px;
-    margin: 5%; 
+    margin: 3% 5%; 
     padding: 2rem;
     border-radius: 10px;
 }
@@ -100,7 +101,8 @@
     }
     
     .contact-hero-content h1 {
-        padding: 0 1.5 0 1.5%;
+        width: 100%;
+        padding: 0 1rem 0 1.5%;
     }    
 
     .contact-form-container {

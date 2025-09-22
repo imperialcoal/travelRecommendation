@@ -162,18 +162,31 @@
 
 /* Adjust for small screens */
 @media (max-width: 600px) {
+    .about-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
     .social-icons {
+        transform: none;
+        flex-direction: row;
+        margin: 1rem auto;
+        padding: 7% 0 0 13%;
+    }
+
+    /* .social-icons {
         left: 10px;
         gap: 1rem;
-    }
+    } */
 
     /* .team {
         padding-left: 25%;
     }     */
 
-    .about-hero {
+    /* .about-hero {
         gap: 1rem;
-    }
+    } */
 
     /* .about-hero-content,
     .team {
