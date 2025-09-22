@@ -35,9 +35,11 @@ body {
     align-self: center;         /* center only this flex item vertically */
     position: static;           /* let flexbox handle it */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;     /* vertical stack on desktop */
+    justify-content: center;    /* center within parent */
     gap: 1rem;
-    flex-shrink: 0;             /* don’t let them squish */    
+    flex-shrink: 0;             /* don’t let them squish */
+    min-width: 50px;            /* reserve space so content doesn’t collide */   
 }
 
 .social-media-overlay {

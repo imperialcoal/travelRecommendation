@@ -47,11 +47,15 @@
 .contact-hero-content {
     flex: 1;
     max-width: 500px;
-    margin: auto;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align content to the top */
+    padding-top: 5rem;           /* optional: adjust spacing from top */    
 }
 
 .contact-hero-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
@@ -117,25 +121,26 @@
     .contact-hero {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
-        /* gap: 1rem; */
+        gap: 0;
     }
 
+    .contact-hero-content {
+       padding-top: 0;
+    }
+    
+    .contact-hero-content h1 {
+        margin-right: 10%;
+        padding: 0 5% 0 5%;
+    }    
+
     .contact-form-container {
-        margin-top: 2rem;
         width: 100%;
     }
 
-    /* .social-icons {
-        left: 10px;
-        gap: 1rem;
-    }     */
-
     .social-icons {
-        left: 10px;
-        top: auto;
-        bottom: 20px;
         transform: none;
-        flex-direction: row;
+        flex-direction: row;    /* switch to horizontal */
+        margin: 1rem auto;      /* push content below */
+        padding: 7% 0 0 15%;
     }
 }
