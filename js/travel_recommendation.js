@@ -1,10 +1,31 @@
 // Fetch JSON data
 let travelData = null;
 
+// Handle error(s) for search results
+const errorMessage = document.getElementById('error-message');
+const closeError = document.getElementById('close-error');
+
+// Show error
+function showError() {
+    errorMessage.style.display = "block";
+}
+
+// Hide error (manual close)
+if (closeError) {
+    closeError.addEventListener('click', () => {
+        hideError();
+    });
+}
+
+// Hide error (when results found)
+function hideError() {
+    errorMessage.style.display = "none";
+}
+
 // Load data on page load
 async function loadTravelData() {
     try {
-        const response = await fetch("travel_recommendation_api.json");
+        const response = await fetch('data/travel_recommendation_api.json');
         travelData = await response.json();
         console.log("Travel Data Loaded:", travelData);
     } catch (error) {
@@ -23,12 +44,12 @@ function levenshtein(a, b) {
 
     for (let i = 1; i <= a.length; i++) {
         for (let j = 1; j <= b.length; j++) {
-        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-            matrix[i - 1][j] + 1,     // deletion
-            matrix[i][j - 1] + 1,     // insertion
-            matrix[i - 1][j - 1] + cost // substitution
-        );
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[i][j] = Math.min(
+                matrix[i - 1][j] + 1,     // deletion
+                matrix[i][j - 1] + 1,     // insertion
+                matrix[i - 1][j - 1] + cost // substitution
+            );
         }
     }
     return matrix[a.length][b.length];
@@ -42,8 +63,8 @@ function findClosestMatch(input, options) {
     options.forEach(option => {
         const distance = levenshtein(input, option.toLowerCase());
         if (distance < minDistance) {
-        minDistance = distance;
-        bestMatch = option;
+            minDistance = distance;
+            bestMatch = option;
         }
     });
 
@@ -62,7 +83,7 @@ function handleSearch(event) {
     resultsContainer.innerHTML = "";
 
     if (!keyword) {
-        resultsContainer.innerHTML = "<p>Please enter a keyword.</p>";
+        showError();
         return;
     }
 
@@ -82,7 +103,7 @@ function handleSearch(event) {
         );
         displayResults(country.cities, resultsContainer);
         } else {
-        resultsContainer.innerHTML = "<p>No results found. Try 'beach', 'temple', or a country name.</p>";
+            showError();
         }
     }
 }
@@ -94,11 +115,11 @@ function displayResults(items, container) {
         card.classList.add("result-card");
 
         card.innerHTML = `
-        <img src="images/${item.imageUrl}" alt="${item.name}">
-        <h3>${item.name}</h3>
-        <p>${item.description}</p>
-        <p><strong>Local Time:</strong> ${getLocalTime(item.name)}</p>
-        <a href="#" class="btn-visit">Visit</a>
+            <img src="images/${item.imageUrl}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <p><strong>Local Time:</strong> ${getLocalTime(item.name)}</p>
+            <a href="#" class="btn-visit">Visit</a>
         `;
 
         container.appendChild(card);
@@ -138,8 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (clearButton) {
         clearButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        handleClear();
+            e.preventDefault();
+            handleClear();
         });
     }
 });
+

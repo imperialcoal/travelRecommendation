@@ -34,6 +34,13 @@
                         <button class="btn-clear" type="clear">Clear</button>
                     </div>
                 </form>
+                <div class="error-message" id="error-message" style="display: none;">
+                    <span class="close-btn" id="close-error">&times;</span>
+                    <p>
+                        No results found. Try <strong>'beach'</strong>, <strong>'temple'</strong>, 
+                        or a country name (<strong>'Australia'</strong>, <strong>'Japan'</strong>, <strong>'Brazil'</strong>).                    
+                    </p>
+                </div>
             </div>
         </nav>
     </header>
@@ -60,8 +67,9 @@
             </p>                        
             <a href="#" class="btn-book">BOOK NOW</a>
         </div>
+        <div id="results" class="results-container"></div>
     </section>
-    <section id="results" class="results-container"></section>
+    <!-- <section id="results" class="results-container"></section> -->
     <script src="js/layout_adjustments.js"></script>
     <script src="js/travel_recommendation.js"></script>
 </body>
