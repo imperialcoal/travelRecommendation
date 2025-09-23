@@ -1,22 +1,21 @@
 /* Hero Section */
 .hero {
-    /* background-image: url("../images/background.jpg"); */
     color: #fff;
     position: relative;
     display: flex;
-    align-items: center;     /* vertically center */
-    justify-content: flex-start; /* keep everything to the left */
-    gap: 3rem;               /* space between icons and text */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
     width: 100%;
-    min-height: 100vh;       /* fill screen height */
-    padding: 0 1.5%;           /* breathing room left/right */
+    min-height: 100vh;
+    padding: 0 1.5%;
     box-sizing: border-box;  
 }
 
 /* Hero Content */
 .hero-content {
     max-width: 750px;
-    flex: 1;                /* take remaining space */
+    flex: 1;
 }
 
 .hero-content h1 {

@@ -36,6 +36,12 @@
     line-height: 1.4;
 }
 
+/* Social Icons */
+.social-icons {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
 /* Mission Hero Section */
 .mission-hero {
     color: #fff;
